@@ -20,7 +20,6 @@ public class Show implements Serializable {
     private double AdvancedTicketPrice;
     private double StudentAdvancedticketPrice;
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-    private Date date;
 
     /**
      * Creates a new Show
@@ -97,6 +96,7 @@ public class Show implements Serializable {
 
     public Date setStartDate(Calendar calendar) {
         Date startDate = calendar.getTime();
+
         return startDate;
     }
 
@@ -108,15 +108,7 @@ public class Show implements Serializable {
         return endDate;
     }
 
-    /**
-     * Getter for the end date of a show
-     *
-     * @return a calendar of the end date
-     */
-    public Calendar getEndDate() {
 
-        return endDate;
-    }
 
 
     /**
@@ -137,6 +129,7 @@ public class Show implements Serializable {
     }
 
 
+
     /**
      * String representing a Show
      *
@@ -145,6 +138,6 @@ public class Show implements Serializable {
     @Override
     public String toString() {
         return "Show: " + getShowName() + ", Client ID: " + getClientID() + ", Start Date: "
-                 + this.setStartDate(startDate) + " ,End Date " + this.setStartDate(endDate);
+                + sdf.format(setStartDate(startDate)) + " ,End Date " + sdf.format(setEndDate(endDate));
     }
 }
