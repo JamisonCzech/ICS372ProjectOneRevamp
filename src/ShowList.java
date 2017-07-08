@@ -1,3 +1,5 @@
+import com.sun.xml.internal.bind.v2.TODO;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -73,17 +75,12 @@ public class ShowList implements Serializable {
      * @return
      */
     public boolean isDatesAvailable(Calendar startDate, Calendar endDate) {
-        Date start;
-        Date end;
-        Iterator iter = this.getShows();
-
+        Iterator iter = shows.iterator();
         while (iter.hasNext()) {
             Show show = (Show) iter.next();
-            start = (Date) show.setStartDate(startDate);
-            end = (Date) show.setStartDate(endDate);
-
-            if ((show.isWithinRange(start)) || (show.isWithinRange(end))) {
+            if ((show.isWithinRange(startDate)) || (show.isWithinRange(endDate))) {
                 return false;
+
             }
 
         }
@@ -171,15 +168,11 @@ public class ShowList implements Serializable {
      * @param date
      * @return
      */
-
-    //ToDo is returning null always....
     public Show checkShowByDate(Calendar date) {
-        Iterator iter = this.getShows();
-
+        Iterator iter = shows.iterator();
         while (iter.hasNext()) {
             Show show = (Show) iter.next();
-            Date showDate = (Date) show.setEndDate(date);
-            if (show.isWithinRange(showDate)) {
+            if (show.isWithinRange(date)) {
                 return show;
             }
         }

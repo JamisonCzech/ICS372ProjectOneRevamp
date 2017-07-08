@@ -41,10 +41,6 @@ public class Show implements Serializable {
     }
 
 
-    //String dateToStart=sdf.format(startDate);
-    //String dateToEnd=sdf.format(endDate);
-
-
     public double getRegularTicketPrice() {
         return RegularTicketPrice;
     }
@@ -100,7 +96,14 @@ public class Show implements Serializable {
         return startDate;
     }
 
-
+    /**
+     * Getter for the start date of a show
+     *
+     * @return a calendar of the start date
+     */
+    public Calendar getStartDate() {
+        return startDate;
+    }
 
 
     public Date setEndDate(Calendar calendar) {
@@ -108,7 +111,15 @@ public class Show implements Serializable {
         return endDate;
     }
 
+    /**
+     * Getter for the end date of a show
+     *
+     * @return a calendar of the end date
+     */
+    public Calendar getEndDate() {
 
+        return endDate;
+    }
 
 
     /**
@@ -117,17 +128,11 @@ public class Show implements Serializable {
      * @param testDate
      * @return true if testDate with in range
      */
-    boolean isWithinRange(Date testDate) {
-
-        Date newStartDate = this.setStartDate(startDate);
-        Date newEndDate = this.setEndDate(endDate);
-
-        if (testDate.after(newStartDate) && testDate.before(newEndDate)) {
+    boolean isWithinRange(Calendar testDate) {
+        if ((testDate.after(this.startDate)) && (testDate.before(this.endDate)))
             return true;
-        }
         return false;
     }
-
 
 
     /**
@@ -138,6 +143,6 @@ public class Show implements Serializable {
     @Override
     public String toString() {
         return "Show: " + getShowName() + ", Client ID: " + getClientID() + ", Start Date: "
-                + sdf.format(setStartDate(startDate)) + " ,End Date " + sdf.format(setEndDate(endDate));
+                + sdf.format(setStartDate(startDate)) + " , End Date " + sdf.format(setEndDate(endDate));
     }
 }
