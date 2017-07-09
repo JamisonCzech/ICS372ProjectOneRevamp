@@ -13,7 +13,7 @@ import java.util.*;
 public class ShowList implements Serializable {
 
     private static ShowList showList;
-    private List shows = new LinkedList();
+    private List<Show> shows = new LinkedList<Show>();
     Date start;
     Date end;
     /*
@@ -54,8 +54,8 @@ public class ShowList implements Serializable {
      * @return a show if found or null if not found
      */
     public Show search(String showName) {
-        for (Iterator iterator = shows.iterator(); iterator.hasNext(); ) {
-            Show show = (Show) iterator.next();
+        for (Iterator<Show> iterator = shows.iterator(); iterator.hasNext(); ) {
+            Show show = iterator.next();
             if (show.getShowName().equals(showName)) {
                 return show;
             }
@@ -71,10 +71,10 @@ public class ShowList implements Serializable {
      */
     public boolean isDateAvailable(Calendar startDate, Calendar endDate) {
 
-        Iterator iter = this.getShows();
+        Iterator<Show> iter = this.getShows();
 
         while (iter.hasNext()) {
-            Show show = (Show) iter.next();
+            Show show = iter.next();
             start =  show.setStartDate(startDate);
             end =  show.setStartDate(endDate);
 
@@ -92,8 +92,8 @@ public class ShowList implements Serializable {
      * Returns an iteration for all
      * of the customers and their cards.
      */
-    public Iterator getShows() {
-        Iterator result = shows.iterator();
+    public Iterator<Show> getShows() {
+        Iterator<Show> result = shows.iterator();
         if (shows != null && !shows.isEmpty()) {
             System.out.println("The Shows are: ");
             while (result.hasNext()) {
@@ -175,10 +175,10 @@ public class ShowList implements Serializable {
 
 
     public Show checkShowByDate(Calendar date) {
-        Iterator result = shows.iterator();
+        Iterator<Show> result = shows.iterator();
 
         while (result.hasNext()) {
-            Show show = (Show) result.next();
+            Show show = result.next();
             Date showDate =  date.getTime();
             if (show.isWithinRange(showDate)) {
                 return show;
@@ -188,10 +188,10 @@ public class ShowList implements Serializable {
     }
 
     public Show checkShowBeforeDate(Calendar date) {
-        Iterator result = shows.iterator();
+        Iterator<Show> result = shows.iterator();
 
         while (result.hasNext()) {
-            Show show = (Show) result.next();
+            Show show = result.next();
             Date showDate =  date.getTime();
             if (show.isBeforeShowBegins(showDate)) {
                 return show;

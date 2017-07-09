@@ -18,7 +18,7 @@ public class CardList implements Serializable {
 
 
     private static CardList cardList;
-    private List cards = new LinkedList();
+    private List<CreditCard> cards = new LinkedList<CreditCard>();
 
     /*
      * Private constructor to create singleton
@@ -59,8 +59,8 @@ public class CardList implements Serializable {
     public CreditCard search(String cardNumber) {
 
         if(cards.size() > 0) {
-            for (Iterator iterator = cards.iterator(); iterator.hasNext(); ) {
-                CreditCard creditCard = (CreditCard) iterator.next();
+            for (Iterator<CreditCard> iterator = cards.iterator(); iterator.hasNext(); ) {
+                CreditCard creditCard = iterator.next();
                 if (creditCard.getCardNumber().equals(cardNumber)) {
                     return creditCard;
                 }
@@ -75,7 +75,7 @@ public class CardList implements Serializable {
      *
      * @return an iterator for the card collection
      */
-    public Iterator getCards() {
+    public Iterator<CreditCard> getCards() {
         return cards.iterator();
     }
 

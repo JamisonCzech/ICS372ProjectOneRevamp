@@ -1,6 +1,8 @@
 import java.io.Serializable;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 
 public abstract class Ticket implements Serializable {
@@ -57,4 +59,24 @@ public abstract class Ticket implements Serializable {
 
     protected abstract double setPrice(double ticketPrice);
 
+    /**
+     * Accepts a Date object and returns the object date in
+     * toString form
+     *
+     * @param inDate Date object
+     * @return date
+     * returns the date as a string.
+     */
+    public String convertStringToDate(Date inDate)
+    {
+        String dateString = null;
+        DateFormat dateFormat = new SimpleDateFormat("dd/MMM/yyyy");
+
+        try{
+            dateString = dateFormat.format( inDate );
+        }catch (Exception ex ){
+            System.out.println(ex);
+        }
+        return dateString;
+    }
 }

@@ -16,7 +16,7 @@ import java.util.List;
 public class CustomerList implements Serializable {
 
 	private static CustomerList customerList;
-	private List customers = new LinkedList();
+	private List<Customer> customers = new LinkedList<Customer>();
 
 	/*
 	 * Private constructor to create singleton
@@ -49,8 +49,8 @@ public class CustomerList implements Serializable {
 	 * @return a Customer if found or null if not found
 	 */
 	public Customer search(String customerID) {
-	    for (Iterator iterator = customers.iterator(); iterator.hasNext(); ) {
-	      Customer customer = (Customer) iterator.next();
+	    for (Iterator<Customer> iterator = customers.iterator(); iterator.hasNext(); ) {
+	      Customer customer = iterator.next();
 	      if (customer.getCustomerID().equals(customerID)) {
 	        return customer;
 	      }
@@ -63,7 +63,7 @@ public class CustomerList implements Serializable {
 	 * Returns an iteration for all
 	 * of the customers and their cards.                                  
 	 */
-	public Iterator getCustomers() {
+	public Iterator<? extends Customer> getCustomers() {
 	    //ToDO need to output credit cards as well to screen
 //		Iterator result = customers.iterator();
 //		if (customers != null && !customers.isEmpty()) {
@@ -72,7 +72,7 @@ public class CustomerList implements Serializable {
 //				System.out.println(result.next());
 //			}
 //		}
-		Iterator result = customers.listIterator();
+		Iterator<? extends Customer> result = customers.listIterator();
 
 		return result;
 	}

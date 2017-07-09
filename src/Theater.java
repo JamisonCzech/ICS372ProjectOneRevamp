@@ -90,7 +90,7 @@ public class Theater implements Serializable {
     }
 
 
-    public Iterator getClients() {
+    public Iterator<? extends Object> getClients() {
 
         return clientList.getClients();
 
@@ -213,7 +213,7 @@ public class Theater implements Serializable {
 
     }
 
-    public Iterator getCustomers() {
+    public Iterator<? extends Object> getCustomers() {
         return customerList.getCustomers();
     }
 
@@ -239,7 +239,7 @@ public class Theater implements Serializable {
     }
 
 
-    public Iterator getShows() {
+    public Iterator<? extends Object> getShows() {
         return showList.getShows();
 
     }
@@ -459,7 +459,7 @@ public class Theater implements Serializable {
     }
 
 
-    public Iterator getTickets(Calendar date) {
+    public Iterator<? extends Object> getTickets(Calendar date) {
         return ticketList.getTicketsForDay(date);
     }
 

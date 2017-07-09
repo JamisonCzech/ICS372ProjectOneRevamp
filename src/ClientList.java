@@ -16,7 +16,7 @@ public class ClientList implements Serializable {
 
 
     private static ClientList clientList;
-    private List clients = new LinkedList();
+    private List<Client> clients = new LinkedList<Client>();
 
     /*
      * Private constructor to create singleton
@@ -26,20 +26,20 @@ public class ClientList implements Serializable {
 
     /**
      * ClientList singleton
-     * @return
-     *   the ClientList singleton object
+     *
+     * @return the ClientList singleton object
      */
     public static ClientList instance() {
         return clientList == null ? (clientList = new ClientList()) : clientList;
     }
 
-   
+
     /**
      * Returns an iteration for all
      * of the clients.
      */
-    public Iterator getClients() {
-        Iterator result = clients.iterator();
+    public Iterator<? extends Object> getClients() {
+        Iterator<Client> result = clients.iterator();
         if (clients != null && !clients.isEmpty()) {
             System.out.println("The Clients are: ");
             while (result.hasNext()) {
@@ -53,10 +53,9 @@ public class ClientList implements Serializable {
 
     /**
      * Adds a Client to the collection
-     * @param client
-     *   <CODE>Client client</CODE>
-     * @return
-     *   a boolean indicating successful addition to collection
+     *
+     * @param client <CODE>Client client</CODE>
+     * @return a boolean indicating successful addition to collection
      */
     public boolean insertClient(Client client) {
         clients.add(client);
@@ -65,13 +64,13 @@ public class ClientList implements Serializable {
 
     /**
      * searches for a client in the collection
-     * @param clientID
-     *   <CODE>String ClientID</CODE>
+     *
+     * @param clientID <CODE>String ClientID</CODE>
      * @return client
      */
     public Client search(String clientID) {
-        for (Iterator iterator = clients.iterator(); iterator.hasNext(); ) {
-            Client client = (Client) iterator.next();
+        for (Iterator<Client> iterator = clients.iterator(); iterator.hasNext(); ) {
+            Client client = iterator.next();
             if (client.getClientID().equals(clientID)) {
                 return client;
             }
@@ -82,15 +81,15 @@ public class ClientList implements Serializable {
 
     /**
      * Removes a client with the given clientID from the collection.
-     * @param clientID
-     *   string clientID
+     *
+     * @param clientID string clientID
      * @return true
-     *   If Client exists in the collection,
-     *   or false otherwise.
+     * If Client exists in the collection,
+     * or false otherwise.
      */
     public boolean removeClient(String clientID) {
         Client client = search(clientID);
-        
+
         if (client == null) {
             return false;
         } else {

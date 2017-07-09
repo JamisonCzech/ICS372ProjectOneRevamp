@@ -10,10 +10,7 @@ import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.Iterator;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /**
  * This class implements the user interface for the Theater project. The
@@ -21,6 +18,7 @@ import java.util.StringTokenizer;
  * number of utility methods exist to make it easier to parse the input.
  */
 public class UserInterface {
+    protected SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     private static UserInterface userInterface;
     private BufferedReader reader = new BufferedReader(
             new InputStreamReader(System.in));
@@ -166,24 +164,24 @@ public class UserInterface {
     public void help() {
         System.out.println("Enter a number between 0 and 13 as explained below:");
         System.out.println(EXIT + " to Exit");
-        System.out.println(ADD_CLIENT + " to add a client ");
-        System.out.println(REMOVE_CLIENT + " to remove client ");
-        System.out.println(LIST_CLIENTS + " to list all clients ");
-        System.out.println(ADD_CUSTOMER + " to add a customer ");
-        System.out.println(REMOVE_CUSTOMER + " to remove a customer ");
-        System.out.println(ADD_CARD + " to add a credit card");
-        System.out.println(REMOVE_CARD + " to remove a credit card");
-        System.out.println(LIST_CUSTOMERS + " to list all customers and credit cards");
-        System.out.println(ADD_SHOW + " to add a show");
-        System.out.println(LIST_SHOWS + " to list all shows");
-        System.out.println(SAVE + " to save data");
-        System.out.println(RETRIEVE + " to retrieve data");
-        System.out.println(SELL_REGULAR_TICKETS + " to sell regular tickets");
-        System.out.println(SELL_ADVANCE_TICKETS + " to sell advanced tickets");
-        System.out.println(SELL_STUDENT_ADVANCE_TICKETS + " tosell student advanced tickets");
-        System.out.println(PAY_CLIENT + " to pay client ");
-        System.out.println(DISPLAY_TICKETS + " to display tickets at certain day ");
-        System.out.println(HELP + " for help");
+        System.out.println(ADD_CLIENT + " to add a client: ");
+        System.out.println(REMOVE_CLIENT + " to remove client: ");
+        System.out.println(LIST_CLIENTS + " to list all clients; ");
+        System.out.println(ADD_CUSTOMER + " to add a customer: ");
+        System.out.println(REMOVE_CUSTOMER + " to remove a customer: ");
+        System.out.println(ADD_CARD + " to add a credit card: ");
+        System.out.println(REMOVE_CARD + " to remove a credit card: ");
+        System.out.println(LIST_CUSTOMERS + " to list all customers and credit cards: ");
+        System.out.println(ADD_SHOW + " to add a show: ");
+        System.out.println(LIST_SHOWS + " to list all shows: ");
+        System.out.println(SAVE + " to save data: ");
+        System.out.println(RETRIEVE + " to retrieve data:");
+        System.out.println(SELL_REGULAR_TICKETS + " to sell regular tickets: ");
+        System.out.println(SELL_ADVANCE_TICKETS + " to sell advanced tickets: ");
+        System.out.println(SELL_STUDENT_ADVANCE_TICKETS + " to sell student advanced tickets: ");
+        System.out.println(PAY_CLIENT + " to pay client: ");
+        System.out.println(DISPLAY_TICKETS + " to display tickets at certain day: ");
+        System.out.println(HELP + " for help: ");
 
     }
 
@@ -195,7 +193,7 @@ public class UserInterface {
     public void addClient() {
         String name = getToken("Enter Client's name: ");
         String address = getToken("Enter address: ");
-        String phone = getToken("Enter phone number: ");
+        String phone = getToken("Enter phone number: #");
         Client result;
         result = theater.addClient(name, address, phone);
         if (result == null) {
@@ -366,8 +364,8 @@ public class UserInterface {
                     System.out.println("Credit ");
                     break;
                 case Theater.ONLY_CARD:
-                    System.out.println(
-                            "Card cannot be removed. Customer must have at least one card on file.");
+                    System.out.println("Card cannot be removed. " +
+                            "Customer must have at least one card on file.");
                     break;
                 case Theater.CARD_REMOVED:
                     System.out.println("Card was successfully removed!");
@@ -491,7 +489,7 @@ public class UserInterface {
                         "The theater has been successfully retrieved from the file 'TheaterData' \n");
                 theater = tempTheater;
             } else {
-                System.out.println("File doesnt exist; creating new theater");
+                System.out.println("File doesn't exist; creating new theater");
                 theater = Theater.instance();
             }
         } catch (Exception cnfe) {
@@ -596,7 +594,7 @@ public class UserInterface {
     public void sellAdvanceStudentTicket() throws ParseException {
         int result;
         do {
-            String customerID = getToken("Enter client id:");
+            String customerID = getToken("Enter customer id:");
             String cardNumber = getToken("Enter cardNumber: ");
             Calendar date = getDate("Enter date as mm/dd/yy:");
             String numTickets = getToken("Enter requested number of tickets:");
@@ -649,10 +647,10 @@ public class UserInterface {
                     System.out.println("No such client!");
                     break;
                 case Theater.AMOUNT_EXCEEDS:
-                    System.out.println("Your requsted amount exceeds your balance ");
+                    System.out.println("Your requested amount exceeds your balance ");
                     break;
                 case Theater.SUCCEED:
-                    System.out.println("You succesefully withdrew your money");
+                    System.out.println("You successfully withdrew your money");
                     break;
                 default:
                     System.out.println("There was an error:");
@@ -664,28 +662,38 @@ public class UserInterface {
         } while (true);
     }
 
+    /**
+     *
+     * @param calendar a calendar object
+     * @return endDate
+     */
+    public Date setDate(Calendar calendar) {
+        Date setDate = calendar.getTime();
+        return setDate;
+    }
 
     public void displayTickets() throws ParseException {
         Iterator iter;
         int numOfTickets = 0;
 
-
         Calendar date = getDate("Enter date as mm/dd/yy:");
 
         iter = theater.getTickets(date);
+
         while (iter.hasNext()) {
             Ticket ticket = (Ticket) iter.next();
             System.out.println(" " + ticket.toString());
             numOfTickets++;
         }
+
         if (numOfTickets != 0) {
-            System.out.println("There are no more tickets for this date " + date);
+            System.out.println("There are no more tickets for this date " + sdf.format(setDate(date)));
         } else {
-            System.out.println("There are no tickets for this date " + date);
+            System.out.println("There are no tickets for this date " + sdf.format(setDate(date)));
         }
-
-
     }
+
+
 
 
     /**

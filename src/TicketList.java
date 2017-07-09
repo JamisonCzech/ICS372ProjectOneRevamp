@@ -11,7 +11,7 @@ public class TicketList implements Serializable{
  
  
 	private static TicketList ticketList;
-	private List tickets = new LinkedList();
+	private List<Ticket> tickets = new LinkedList<Ticket>();
  
 	/*
 	 * Private constructor to create singleton
@@ -53,13 +53,13 @@ public class TicketList implements Serializable{
      * Returns an iterator for all
      * of the tickets
      */
-    public Iterator getTicketsForDay(Calendar showDate) {
+    public Iterator<Ticket> getTicketsForDay(Calendar showDate) {
      
-    	List ticketsForDate = new LinkedList();
+    	List<Ticket> ticketsForDate = new LinkedList<Ticket>();
         if (tickets != null && !tickets.isEmpty()) {
         	
-        	for(Iterator iterator = tickets.iterator(); iterator.hasNext();) {
-        		Ticket ticket = (Ticket) iterator.next();
+        	for(Iterator<Ticket> iterator = tickets.iterator(); iterator.hasNext();) {
+        		Ticket ticket = iterator.next();
         		if (ticket.getDate().equals(showDate)) {
         			ticketsForDate.add(ticket);
         		}

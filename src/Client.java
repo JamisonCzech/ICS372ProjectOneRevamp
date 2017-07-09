@@ -20,12 +20,9 @@ public class Client implements Serializable {
     /**
      * Creates a new Client assigning a unique ID and default balance
      *
-     * @param name
-     *   String name
-     * @param address
-     *   String address
-     * @param phoneNumber
-     *   String phoneNumber
+     * @param name        String name
+     * @param address     String address
+     * @param phoneNumber String phoneNumber
      */
     public Client(String name, String address, String phoneNumber) {
         this.name = name;
@@ -38,8 +35,9 @@ public class Client implements Serializable {
 
     /**
      * Gets client's name
+     *
      * @return <b>PostCondition:</b>
-     *   Returns a string of the client's name.
+     * Returns a string of the client's name.
      */
     public String getName() {
         return name;
@@ -47,8 +45,9 @@ public class Client implements Serializable {
 
     /**
      * Get's client's current balance
+     *
      * @return <b>PostCondition:</b>
-     *   Returns the Client's current balance
+     * Returns the Client's current balance
      */
     public double getBalance() {
         return balance;
@@ -57,9 +56,8 @@ public class Client implements Serializable {
     /**
      * Gets client's address
      *
-     * @return
-     * <b>PostCondition:</b>
-     *   a string of the client's address
+     * @return <b>PostCondition:</b>
+     * a string of the client's address
      */
     public String getAddress() {
         return address;
@@ -68,9 +66,8 @@ public class Client implements Serializable {
     /**
      * Gets client's phone number
      *
-     * @return
-     * <b>PostCondition:</b>
-     *   a string of the client's phone number
+     * @return <b>PostCondition:</b>
+     * a string of the client's phone number
      */
     public String getPhoneNumber() {
         return phoneNumber;
@@ -80,33 +77,36 @@ public class Client implements Serializable {
      * Get the client's ID number
      *
      * @return <b>PostCondition:</b>
-     *   a long of the client's ID number
+     * a long of the client's ID number
      */
     public String getClientID() {
         return clientID;
     }
-    
+
     /**
      * this method adds half of the total of sold tickets
+     *
      * @param amount
      */
     public void addToBalance(double amount) {
-    	this.balance+=amount;
+        this.balance += amount;
     }
-    
-    
+
+
     /**
      * withdraw money from client balance
+     *
      * @param amount
      */
     public void withdrawMoney(double amount) {
-    	this.balance-=amount;
+        this.balance -= amount;
     }
 
     /**
      * String representing a client
+     *
      * @return <b>PostCondition:</b>
-     *   a string representing a client
+     * a string representing a client
      */
     @Override
     public String toString() {
