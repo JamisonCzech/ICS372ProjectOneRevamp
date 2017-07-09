@@ -76,7 +76,6 @@ public class CardList implements Serializable {
      * @return an iterator for the card collection
      */
     public Iterator getCards() {
-        //ToDO finish getCardList
         return cards.iterator();
     }
 

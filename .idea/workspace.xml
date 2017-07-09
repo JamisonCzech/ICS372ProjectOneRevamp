@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62bd81eb-e0c1-4103-af0f-206c8ce3176b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TheaterData" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TheaterData" afterPath="$PROJECT_DIR$/TheaterData" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ICS372ProjectTwo/AdvancedTicket.class" afterPath="$PROJECT_DIR$/out/production/ICS372ProjectTwo/AdvancedTicket.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdvancedTicket.java" afterPath="$PROJECT_DIR$/src/AdvancedTicket.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CardList.java" afterPath="$PROJECT_DIR$/src/CardList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RegularTicket.java" afterPath="$PROJECT_DIR$/src/RegularTicket.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Show.java" afterPath="$PROJECT_DIR$/src/Show.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ShowList.java" afterPath="$PROJECT_DIR$/src/ShowList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Theater.java" afterPath="$PROJECT_DIR$/src/Theater.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Ticket.java" afterPath="$PROJECT_DIR$/src/Ticket.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserInterface.java" afterPath="$PROJECT_DIR$/src/UserInterface.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,26 +31,8 @@
             <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/UserInterface.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="459">
-                    <caret line="557" column="58" lean-forward="false" selection-start-line="557" selection-start-column="48" selection-end-line="557" selection-end-column="58" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="Show.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/Show.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="357">
-                    <caret line="21" column="70" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="70" />
+                  <state relative-caret-position="834">
+                    <caret line="591" column="49" lean-forward="false" selection-start-line="591" selection-start-column="49" selection-end-line="591" selection-end-column="49" />
                     <folding />
                   </state>
                 </provider>
@@ -87,11 +67,11 @@
             <file leaf-file-name="ShowList.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/ShowList.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-133">
-                    <caret line="142" column="6" lean-forward="true" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+                  <state relative-caret-position="505">
+                    <caret line="189" column="35" lean-forward="false" selection-start-line="189" selection-start-column="16" selection-end-line="189" selection-end-column="35" />
                     <folding>
-                      <element signature="e#4616#4617#0" expanded="true" />
-                      <element signature="e#4655#4656#0" expanded="true" />
+                      <element signature="e#4936#4937#0" expanded="true" />
+                      <element signature="e#4975#4976#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -108,8 +88,8 @@
             <file leaf-file-name="Theater.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/Theater.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="324">
-                    <caret line="353" column="0" lean-forward="false" selection-start-line="352" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
+                  <state relative-caret-position="819">
+                    <caret line="502" column="0" lean-forward="false" selection-start-line="502" selection-start-column="0" selection-end-line="502" selection-end-column="0" />
                     <folding />
                   </state>
                 </provider>
@@ -128,10 +108,10 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.56607497">
+    <splitter split-orientation="horizontal" split-proportion="0.48400852">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="AdvancedTicket.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="AdvancedTicket.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/AdvancedTicket.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="510">
@@ -196,11 +176,12 @@
           <file leaf-file-name="CardList.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/CardList.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-28">
-                  <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+                <state relative-caret-position="289">
+                  <caret line="77" column="32" lean-forward="false" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
                   <folding>
-                    <element signature="e#3515#3516#0" expanded="true" />
-                    <element signature="e#3554#3555#0" expanded="true" />
+                    <element signature="e#1940#1941#0" expanded="true" />
+                    <element signature="e#3481#3482#0" expanded="true" />
+                    <element signature="e#3520#3521#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -216,12 +197,17 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Theater.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Theater.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Theater.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1216">
-                  <caret line="361" column="49" lean-forward="true" selection-start-line="352" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
-                  <folding />
+                <state relative-caret-position="392">
+                  <caret line="298" column="50" lean-forward="false" selection-start-line="298" selection-start-column="50" selection-end-line="298" selection-end-column="50" />
+                  <folding>
+                    <element signature="e#1792#1793#0" expanded="true" />
+                    <element signature="e#1868#1869#0" expanded="true" />
+                    <element signature="e#6498#6499#0" expanded="true" />
+                    <element signature="e#6548#6549#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -230,21 +216,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Theater.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Theater.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Theater.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="366">
-                  <caret line="361" column="49" lean-forward="true" selection-start-line="352" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
+                <state relative-caret-position="285">
+                  <caret line="362" column="40" lean-forward="false" selection-start-line="362" selection-start-column="40" selection-end-line="362" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="RegularTicket.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="RegularTicket.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/RegularTicket.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="66" lean-forward="true" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+                <state relative-caret-position="527">
+                  <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -284,15 +270,15 @@
         <option value="$PROJECT_DIR$/src/Customer.java" />
         <option value="$PROJECT_DIR$/src/StudentAdvancedTicket.java" />
         <option value="$PROJECT_DIR$/src/CreditCard.java" />
-        <option value="$PROJECT_DIR$/src/CardList.java" />
-        <option value="$PROJECT_DIR$/src/ShowList.java" />
         <option value="$PROJECT_DIR$/src/CustomerList.java" />
-        <option value="$PROJECT_DIR$/src/Show.java" />
         <option value="$PROJECT_DIR$/src/Ticket.java" />
-        <option value="$PROJECT_DIR$/src/Theater.java" />
         <option value="$PROJECT_DIR$/src/AdvancedTicket.java" />
-        <option value="$PROJECT_DIR$/src/RegularTicket.java" />
         <option value="$PROJECT_DIR$/src/UserInterface.java" />
+        <option value="$PROJECT_DIR$/src/RegularTicket.java" />
+        <option value="$PROJECT_DIR$/src/ShowList.java" />
+        <option value="$PROJECT_DIR$/src/CardList.java" />
+        <option value="$PROJECT_DIR$/src/Show.java" />
+        <option value="$PROJECT_DIR$/src/Theater.java" />
       </list>
     </option>
   </component>
@@ -885,7 +871,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1498523468108</updated>
-      <workItem from="1499534034727" duration="21446000" />
+      <workItem from="1499534034727" duration="24356000" />
     </task>
     <task id="LOCAL-00001" summary="example client ID = cl 1 &quot;Name&quot;&#10;example customer ID = cust 1 &quot;Name&quot;">
       <created>1498525076566</created>
@@ -957,11 +943,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499538361092</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="need generics">
+      <created>1499565267512</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1499565267512</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21446000" />
+    <option name="totallyTimeSpent" value="24356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -974,6 +967,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -997,7 +991,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40793827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13781698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1028,7 +1022,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22050716" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37155458" sideWeight="0.4936034" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16427784" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18923241" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1048,25 +1042,22 @@
     <MESSAGE value="current" />
     <MESSAGE value="Still Need for code: &#10;Generics.&#10;To be able to purchase tickets.&#10;Take all extra code out and utilize Ticket abstract class.&#10;Double Check comments and create JavaDoc." />
     <MESSAGE value="Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+    <MESSAGE value="need generics" />
+    <option name="LAST_COMMIT_MESSAGE" value="need generics" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Theater.java</url>
-          <line>298</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Theater.java</url>
-          <line>352</line>
-          <properties />
-          <option name="timeStamp" value="10" />
+          <line>349</line>
+          <properties class="Theater" method="sellAdvTickets">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1131,12 +1122,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#1323#1324#0" expanded="false" />
-            <element signature="e#1364#1365#0" expanded="false" />
-            <element signature="e#1433#1434#0" expanded="false" />
-            <element signature="e#1488#1489#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1145,8 +1131,8 @@
         <state relative-caret-position="289">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
-            <element signature="e#4616#4617#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4936#4937#0" expanded="true" />
+            <element signature="e#4975#4976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1155,7 +1141,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="94" lean-forward="true" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
-          <folding />
+          <folding>
+            <element signature="e#1792#1793#0" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#6498#6499#0" expanded="true" />
+            <element signature="e#6548#6549#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,12 +1214,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#1323#1324#0" expanded="false" />
-            <element signature="e#1364#1365#0" expanded="false" />
-            <element signature="e#1433#1434#0" expanded="false" />
-            <element signature="e#1488#1489#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1237,8 +1223,8 @@
         <state relative-caret-position="289">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
-            <element signature="e#4616#4617#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4936#4937#0" expanded="true" />
+            <element signature="e#4975#4976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1247,7 +1233,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="74" lean-forward="true" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
-          <folding />
+          <folding>
+            <element signature="e#1792#1793#0" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#6498#6499#0" expanded="true" />
+            <element signature="e#6548#6549#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1315,12 +1306,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="e#1323#1324#0" expanded="false" />
-            <element signature="e#1364#1365#0" expanded="false" />
-            <element signature="e#1433#1434#0" expanded="false" />
-            <element signature="e#1488#1489#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1329,8 +1315,8 @@
         <state relative-caret-position="289">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
-            <element signature="e#4616#4617#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
+            <element signature="e#4936#4937#0" expanded="true" />
+            <element signature="e#4975#4976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1339,7 +1325,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#1792#1793#0" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#6498#6499#0" expanded="true" />
+            <element signature="e#6548#6549#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1456,36 +1447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding>
-            <element signature="e#3515#3516#0" expanded="true" />
-            <element signature="e#3554#3555#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ShowList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="142" column="6" lean-forward="true" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
-          <folding>
-            <element signature="e#4616#4617#0" expanded="true" />
-            <element signature="e#4655#4656#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Show.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="70" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1527,9 +1488,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RegularTicket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="66" lean-forward="true" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+        <state relative-caret-position="527">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="591" column="49" lean-forward="false" selection-start-line="591" selection-start-column="49" selection-end-line="591" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ShowList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="189" column="35" lean-forward="false" selection-start-line="189" selection-start-column="16" selection-end-line="189" selection-end-column="35" />
+          <folding>
+            <element signature="e#4936#4937#0" expanded="true" />
+            <element signature="e#4975#4976#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="77" column="32" lean-forward="false" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+          <folding>
+            <element signature="e#1940#1941#0" expanded="true" />
+            <element signature="e#3481#3482#0" expanded="true" />
+            <element signature="e#3520#3521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Theater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="298" column="50" lean-forward="false" selection-start-line="298" selection-start-column="50" selection-end-line="298" selection-end-column="50" />
+          <folding>
+            <element signature="e#1792#1793#0" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#6498#6499#0" expanded="true" />
+            <element signature="e#6548#6549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Show.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding>
+            <element signature="e#1323#1324#0" expanded="true" />
+            <element signature="e#1364#1365#0" expanded="true" />
+            <element signature="e#1433#1434#0" expanded="true" />
+            <element signature="e#1488#1489#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1577#1578#0" expanded="true" />
+            <element signature="e#1648#1649#0" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1808#1809#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1537,22 +1561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="557" column="58" lean-forward="false" selection-start-line="557" selection-start-column="48" selection-end-line="557" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Theater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="361" column="49" lean-forward="true" selection-start-line="352" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -286,13 +286,13 @@ public class Theater implements Serializable {
 
 
     /**
-     * sells regular tickets
+     * Purchase regular tickets for
      *
-     * @param customerID
-     * @param cardNumber
-     * @param date
-     * @param quantity
-     * @return
+     * @param customerID String CustomerID
+     * @param cardNumber String cardNumber
+     * @param date the date
+     * @param quantity quantity purchased
+     * @return the total amount.
      */
     public int sellRegTickets(String customerID, String cardNumber, Calendar date, int quantity) {
 
@@ -337,105 +337,104 @@ public class Theater implements Serializable {
 
 
     /**
-     * sells student advanced tickets
+     * Purchase advanced tickets, gets information from user
+     * to purchase advanced tickets with a savings of 30%.
+     * Tickets must be purchased before the show run starts.
      *
-     * @param customerID
-     * @param cardNumber
-     * @param date
-     * @param quantity
-     * @return
+     * @param customerID String CustomerID
+     * @param cardNumber String cardNumber
+     * @param date the date
+     * @param quantity quantity purchased
+     * @return the total amount.
      */
     public int sellAdvTickets(String customerID, String cardNumber, Calendar date, int quantity) {
 
-        Calendar currentDate = Calendar.getInstance();
+        Customer customer = customerList.search(customerID);
 
-        if (currentDate.equals(date)) {
-            Customer customer = customerList.search(customerID);
+        if (customer != null) {
+            CreditCard card = customer.searchCard(cardNumber);
 
-            if (customer != null) {
-                CreditCard card = customer.searchCard(cardNumber);
-                if (card != null) {
-                    Show show = showList.checkShowByDate(date);
-                    if (show != null) {
+            if (card != null) {
+                Show show = showList.checkShowBeforeDate(date);
 
-                        double price = show.getAdvancedTicketPrice();
-                        Ticket ticket = new AdvancedTicket(quantity, price, date);
-                        this.ticketList.insertTicket(ticket);
-                        customer.addTickets(ticket);
-                        System.out.println("The total is: $" + ticket.getTotal());
-                        String clientID = show.getClientID();
-                        Client client = clientList.search(clientID);
-                        double clientMoney = ticket.getTotal() / 2;
-                        System.out.println("The client money: $" + clientMoney);
-                        client.addToBalance(clientMoney);
-                        return SUCCEED;
+                if (show != null) {
 
-                    } else {
-                        return SHOW_NOT_FOUND;
 
-                    }
+                    double price = show.getAdvancedTicketPrice();
+                    Ticket ticket = new AdvancedTicket(quantity, price, date);
+                    this.ticketList.insertTicket(ticket);
+                    customer.addTickets(ticket);
+                    System.out.println("The total is: $" + ticket.getTotal());
+                    String clientID = show.getClientID();
+                    Client client = clientList.search(clientID);
+                    double clientMoney = ticket.getTotal() / 2;
+                    System.out.println("The client money: $" + clientMoney);
+                    client.addToBalance(clientMoney);
+                    return SUCCEED;
 
                 } else {
-                    return CARD_NOT_FOUND;
+                    return SHOW_NOT_FOUND;
+
                 }
 
             } else {
-                return CUSTOMER_NOT_FOUND;
+                return CARD_NOT_FOUND;
             }
 
-
         } else {
-            return INVALID_DATE;
+            return CUSTOMER_NOT_FOUND;
         }
 
 
     }
 
     /**
-     * sells regular tickets
+     * sells student advanced tickets, gets information from user
+     * to purchase advanced tickets with a savings of 50%.
+     * Tickets must be purchased before the show run starts.
      *
-     * @param customerID
-     * @param cardNumber
-     * @param date
-     * @param quantity
-     * @return
+     *
+     * @param customerID String CustomerID
+     * @param cardNumber String cardNumber
+     * @param date the date
+     * @param quantity quantity purchased
+     * @return the total amount.
      */
     public int sellAdvStudTickets(String customerID, String cardNumber, Calendar date, int quantity) {
-        Calendar currentDate = Calendar.getInstance();
-        if (currentDate.equals(date)) {
-            Customer customer = customerList.search(customerID);
-            if (customer != null) {
-                CreditCard card = customer.searchCard(cardNumber);
-                if (card != null) {
-                    Show show = showList.checkShowByDate(date);
-                    if (show != null) {
-                        String showName = show.getShowName();
-                        double price = show.getAdvancedTicketPrice();
-                        Ticket ticket = new StudentAdvancedTicket(quantity, price, date);
-                        this.ticketList.insertTicket(ticket);
-                        customer.addTickets(ticket);
-                        String clientID = show.getClientID();
-                        Client client = clientList.search(clientID);
-                        double clientMoney = ticket.getTotal() / 2;
-                        client.addToBalance(clientMoney);
-                        return SUCCEED;
+        Customer customer = customerList.search(customerID);
 
-                    } else {
-                        return SHOW_NOT_FOUND;
+        if (customer != null) {
+            CreditCard card = customer.searchCard(cardNumber);
 
-                    }
+            if (card != null) {
+                Show show = showList.checkShowBeforeDate(date);
+
+                if (show != null) {
+
+
+                    double price = show.getStudentAdvancedTicketPrice();
+                    Ticket ticket = new StudentAdvancedTicket(quantity, price, date);
+                    this.ticketList.insertTicket(ticket);
+                    customer.addTickets(ticket);
+                    System.out.println("The total is: $" + ticket.getTotal());
+                    String clientID = show.getClientID();
+                    Client client = clientList.search(clientID);
+                    double clientMoney = ticket.getTotal() / 2;
+                    System.out.println("The client money: $" + clientMoney);
+                    client.addToBalance(clientMoney);
+                    return SUCCEED;
 
                 } else {
-                    return CARD_NOT_FOUND;
+                    return SHOW_NOT_FOUND;
+
                 }
 
             } else {
-                return CUSTOMER_NOT_FOUND;
+                return CARD_NOT_FOUND;
             }
 
-
         } else {
-            return INVALID_DATE;
+            return CUSTOMER_NOT_FOUND;
         }
 
 

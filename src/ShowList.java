@@ -173,7 +173,7 @@ public class ShowList implements Serializable {
      * @return
      */
 
-    //ToDo is returning null always....
+
     public Show checkShowByDate(Calendar date) {
         Iterator result = shows.iterator();
 
@@ -186,6 +186,20 @@ public class ShowList implements Serializable {
         }
         return null;
     }
+
+    public Show checkShowBeforeDate(Calendar date) {
+        Iterator result = shows.iterator();
+
+        while (result.hasNext()) {
+            Show show = (Show) result.next();
+            Date showDate =  date.getTime();
+            if (show.isBeforeShowBegins(showDate)) {
+                return show;
+            }
+        }
+        return null;
+    }
+
 
     /**
      * String of the show

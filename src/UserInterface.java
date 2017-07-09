@@ -570,10 +570,10 @@ public class UserInterface {
                     System.out.println("There is no show at this date!");
                     break;
                 case Theater.INVALID_DATE:
-                    System.out.println("Advanced tickets cannot be purchased in the same day all later");
+                    System.out.println("Advanced tickets cannot be purchased on the same day of the show!");
                     break;
                 case Theater.SUCCEED:
-                    System.out.println("You successfully bought regular tickets");
+                    System.out.println("You successfully bought advanced tickets");
                     break;
 
                 default:
@@ -615,10 +615,10 @@ public class UserInterface {
                     System.out.println("There is no show at this date!");
                     break;
                 case Theater.INVALID_DATE:
-                    System.out.println(" Student Advanced tickets cannot be purchased in the same day all later");
+                    System.out.println(" Student Advanced tickets cannot be purchased in the same day of the show!");
                     break;
                 case Theater.SUCCEED:
-                    System.out.println("You successfully bought student advanced tickets. \n Must show valid student id");
+                    System.out.println("You successfully bought student student advanced tickets. \n Must show valid student id");
                     break;
 
                 default:

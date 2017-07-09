@@ -144,6 +144,25 @@ public class Show implements Serializable {
         return false;
     }
 
+    /**
+     * checks if date is before the start of
+     * the show run.
+     *
+     * @param dateEntered dateEntered
+     *      by the clerk for day of ticket purchase
+     * @return true
+     *      if testDate with in range
+     */
+    boolean isBeforeShowBegins(Date dateEntered) {
+
+        Date newStartDate = this.setStartDate(startDate);
+
+        if (dateEntered.before(newStartDate)) {
+            return true;
+        }
+        return false;
+    }
+
 
     /**
      * String representing a Show
