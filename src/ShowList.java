@@ -1,14 +1,8 @@
-import com.sun.xml.internal.bind.v2.TODO;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.sql.Date;
-import java.util.Calendar;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * The collection class for Show objects
@@ -20,7 +14,8 @@ public class ShowList implements Serializable {
 
     private static ShowList showList;
     private List shows = new LinkedList();
-
+    Date start;
+    Date end;
     /*
      * Private constructor to create singleton
      */
@@ -74,13 +69,17 @@ public class ShowList implements Serializable {
      * @param endDate
      * @return
      */
-    public boolean isDatesAvailable(Calendar startDate, Calendar endDate) {
-        Iterator iter = shows.iterator();
+    public boolean isDateAvailable(Calendar startDate, Calendar endDate) {
+
+        Iterator iter = this.getShows();
+
         while (iter.hasNext()) {
             Show show = (Show) iter.next();
-            if ((show.isWithinRange(startDate)) || (show.isWithinRange(endDate))) {
-                return false;
+            start =  show.setStartDate(startDate);
+            end =  show.setStartDate(endDate);
 
+            if ((show.isWithinRange(start)) || (show.isWithinRange(end))) {
+                return false;
             }
 
         }
@@ -89,13 +88,11 @@ public class ShowList implements Serializable {
         return true;
     }
 
-
     /**
      * Returns an iteration for all
      * of the customers and their cards.
      */
     public Iterator getShows() {
-        //ToDO fix show output to screen
         Iterator result = shows.iterator();
         if (shows != null && !shows.isEmpty()) {
             System.out.println("The Shows are: ");
@@ -168,11 +165,22 @@ public class ShowList implements Serializable {
      * @param date
      * @return
      */
+
+    /**
+     * check if there is show in the certain day
+     *
+     * @param date
+     * @return
+     */
+
+    //ToDo is returning null always....
     public Show checkShowByDate(Calendar date) {
-        Iterator iter = shows.iterator();
-        while (iter.hasNext()) {
-            Show show = (Show) iter.next();
-            if (show.isWithinRange(date)) {
+        Iterator result = shows.iterator();
+
+        while (result.hasNext()) {
+            Show show = (Show) result.next();
+            Date showDate =  date.getTime();
+            if (show.isWithinRange(showDate)) {
                 return show;
             }
         }

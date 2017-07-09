@@ -18,8 +18,8 @@ public class Show implements Serializable {
     private Calendar endDate;
     private double RegularTicketPrice;
     private double AdvancedTicketPrice;
-    private double StudentAdvancedticketPrice;
-    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    private double StudentAdvancedTicketPrice;
+    private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     /**
      * Creates a new Show
@@ -37,7 +37,7 @@ public class Show implements Serializable {
         this.endDate = endDate;
         this.RegularTicketPrice = ticketPrice;
         this.AdvancedTicketPrice = RegularTicketPrice * 0.7;
-        this.StudentAdvancedticketPrice = this.AdvancedTicketPrice * .5;
+        this.StudentAdvancedTicketPrice = this.AdvancedTicketPrice * .5;
     }
 
 
@@ -61,13 +61,13 @@ public class Show implements Serializable {
     }
 
 
-    public double getStudentAdvancedticketPrice() {
-        return StudentAdvancedticketPrice;
+    public double getStudentAdvancedTicketPrice() {
+        return StudentAdvancedTicketPrice;
     }
 
 
-    public void setStudentAdvancedticketPrice(double studentAdvancedticketPrice) {
-        StudentAdvancedticketPrice = studentAdvancedticketPrice;
+    public void setStudentAdvancedTicketPrice(double studentAdvancedTicketPrice) {
+        StudentAdvancedTicketPrice = studentAdvancedTicketPrice;
     }
 
 
@@ -92,7 +92,6 @@ public class Show implements Serializable {
 
     public Date setStartDate(Calendar calendar) {
         Date startDate = calendar.getTime();
-
         return startDate;
     }
 
@@ -100,12 +99,18 @@ public class Show implements Serializable {
      * Getter for the start date of a show
      *
      * @return a calendar of the start date
+     * @param startDate
      */
-    public Calendar getStartDate() {
-        return startDate;
+    public Calendar getStartDate(Calendar startDate) {
+        return this.startDate;
     }
 
 
+    /**
+     *
+     * @param calendar a calendar object
+     * @return endDate
+     */
     public Date setEndDate(Calendar calendar) {
         Date endDate = calendar.getTime();
         return endDate;
@@ -128,9 +133,14 @@ public class Show implements Serializable {
      * @param testDate
      * @return true if testDate with in range
      */
-    boolean isWithinRange(Calendar testDate) {
-        if ((testDate.after(this.startDate)) && (testDate.before(this.endDate)))
+    boolean isWithinRange(Date testDate) {
+
+        Date newStartDate = this.setStartDate(startDate);
+        Date newEndDate = this.setEndDate(endDate);
+
+        if (testDate.after(newStartDate) && testDate.before(newEndDate)) {
             return true;
+        }
         return false;
     }
 
@@ -143,6 +153,6 @@ public class Show implements Serializable {
     @Override
     public String toString() {
         return "Show: " + getShowName() + ", Client ID: " + getClientID() + ", Start Date: "
-                + sdf.format(setStartDate(startDate)) + " , End Date " + sdf.format(setEndDate(endDate));
+                + sdf.format(setStartDate(startDate)) + " , End Date: " + sdf.format(setEndDate(endDate));
     }
 }

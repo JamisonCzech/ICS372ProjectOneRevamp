@@ -45,6 +45,7 @@ public class Theater implements Serializable {
         clientList = ClientList.instance();
         showList = ShowList.instance();
         customerList = CustomerList.instance();
+        ticketList = TicketList.instance();
     }
 
     /**
@@ -220,7 +221,7 @@ public class Theater implements Serializable {
                        Calendar endDate, double regularPrice) {
         Client client = clientList.search(clientID);
         if (client != null) {
-            if (showList.isDatesAvailable(startDate, endDate)) {
+            if (showList.isDateAvailable(startDate, endDate)) {
                 Show show = new Show(showName, clientID, startDate, endDate, regularPrice);
                 if (showList.insertShow(show)) {
                     return SHOW_ADDED;
@@ -305,16 +306,16 @@ public class Theater implements Serializable {
 
                 if (show != null) {
 
-                    String showName = show.getShowName();
+
                     double price = show.getRegularTicketPrice();
                     Ticket ticket = new RegularTicket(quantity, price, date);
                     this.ticketList.insertTicket(ticket);
                     customer.addTickets(ticket);
-                    System.out.println("The total is: " + ticket.getTotal());
+                    System.out.println("The total is: $" + ticket.getTotal());
                     String clientID = show.getClientID();
                     Client client = clientList.search(clientID);
                     double clientMoney = ticket.getTotal() / 2;
-                    System.out.println("The client monney: " + clientMoney);
+                    System.out.println("The client money: $" + clientMoney);
                     client.addToBalance(clientMoney);
                     return SUCCEED;
 
@@ -345,22 +346,27 @@ public class Theater implements Serializable {
      * @return
      */
     public int sellAdvTickets(String customerID, String cardNumber, Calendar date, int quantity) {
+
         Calendar currentDate = Calendar.getInstance();
+
         if (currentDate.equals(date)) {
             Customer customer = customerList.search(customerID);
+
             if (customer != null) {
                 CreditCard card = customer.searchCard(cardNumber);
                 if (card != null) {
                     Show show = showList.checkShowByDate(date);
                     if (show != null) {
-                        String showName = show.getShowName();
+
                         double price = show.getAdvancedTicketPrice();
                         Ticket ticket = new AdvancedTicket(quantity, price, date);
                         this.ticketList.insertTicket(ticket);
                         customer.addTickets(ticket);
+                        System.out.println("The total is: $" + ticket.getTotal());
                         String clientID = show.getClientID();
                         Client client = clientList.search(clientID);
                         double clientMoney = ticket.getTotal() / 2;
+                        System.out.println("The client money: $" + clientMoney);
                         client.addToBalance(clientMoney);
                         return SUCCEED;
 
@@ -405,7 +411,7 @@ public class Theater implements Serializable {
                     if (show != null) {
                         String showName = show.getShowName();
                         double price = show.getAdvancedTicketPrice();
-                        Ticket ticket = new AdvancedTicket(quantity, price, date);
+                        Ticket ticket = new StudentAdvancedTicket(quantity, price, date);
                         this.ticketList.insertTicket(ticket);
                         customer.addTickets(ticket);
                         String clientID = show.getClientID();

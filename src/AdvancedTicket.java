@@ -19,7 +19,7 @@ public class AdvancedTicket extends Ticket implements Serializable {
     public String toString() {
         String outputString = "Ticket Serial Number: " + this.getSerialNumber()
                 + "Type: " + this.ticketType
-                + "Date: " + this.date
+                + "Date: " + sdf.format(date)
                 + "Price: " + this.price
                 + "Quantity: " + this.quantity
                 + "Total: " + this.getTotal();

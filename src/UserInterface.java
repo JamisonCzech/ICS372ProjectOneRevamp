@@ -509,10 +509,11 @@ public class UserInterface {
         int result;
         do {
             String customerID = getToken("Enter customer id:");
-            String cardNumber = getToken("Enter cardNumber: ");
+            String cardNumber = getToken("Enter card number: ");
             Calendar date = getDate("Enter date as mm/dd/yy:");
             String numTickets = getToken("Enter requested number of tickets:");
             Integer quantity = Integer.parseInt(numTickets);
+
 
             result = theater.sellRegTickets(customerID, cardNumber, date, quantity);
 
@@ -550,8 +551,8 @@ public class UserInterface {
     public void sellAdvanceTicket() throws ParseException {
         int result;
         do {
-            String customerID = getToken("Enter client id:");
-            String cardNumber = getToken("Enter cardNumber: ");
+            String customerID = getToken("Enter customer id:");
+            String cardNumber = getToken("Enter card number: ");
             Calendar date = getDate("Enter date as mm/dd/yy:");
             String numTickets = getToken("Enter requested number of tickets:");
             Integer quantity = Integer.parseInt(numTickets);

@@ -3,6 +3,7 @@ import java.util.Calendar;
 
 public class RegularTicket extends Ticket implements Serializable {
 
+
 	public RegularTicket(int quantity, double price, Calendar date) {
 		this.quantity = quantity;
 		this.date = date;
@@ -19,7 +20,7 @@ public class RegularTicket extends Ticket implements Serializable {
 	public String toString() {
 		String outputString = "Ticket Serial Number: " + this.getSerialNumber()
 				+ "Type: " + this.ticketType 
-				+ "Date: " + this.date 
+				+ "Date: " + sdf.format(date)
 				+ "Price: " + this.price 
 				+ "Quantity: " + this.quantity
 				+ "Total: " + this.getTotal();
